@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://pygame-web.github.io/archives/0.8/browserfs.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="transfer" align="center">
+        <div class="emscripten" id="status">Downloading...</div>
+        <div class="emscripten">
+            <progress value="0" max="100" id="progress"></progress>
+        </div>
+    </div>
+
+    <canvas class="emscripten" id="canvas" width="1px" height="1px" oncontextmenu="event.preventDefault()" tabindex="1"></canvas>
+    <div id="html"></div>
+    <div id="crt" class="bottomright">
+        <div id="system" hidden>
+            <!-- System buttons and information could go here -->
+        </div>
+        <div id="box" class="emscripten_border" hidden=true>
+            <!-- Other interactive elements -->
+        </div>
+    </div>
+
+    <div id="dlg" hidden>
+        <input type="file" id="dlg_multifile" multiple accept="image/*">
+        <label for="dlg_multifile">Select files</label>
+    </div>
+
+    <div id="pyconsole">
+        <div id="terminal" tabIndex="1" align="left"></div>
+    </div>
+</body>
+</html>
